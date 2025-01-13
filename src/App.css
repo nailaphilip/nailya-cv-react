@@ -1,0 +1,243 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  font-size: 25px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.cv-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left column takes 1 fraction, right column 2 fractions */
+  gap: 20px;
+}
+
+.left-column {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced out nicely */
+}
+
+/* Header styles */
+.header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 200px;  /* Increased size */
+  height: 200px;  /* Increased size */
+  border-radius: 50%; /* Makes the photo round */
+  border: 4px solid #4CAF50;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/* Printed photo styling */
+.cv-container.print-mode .profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 200px; /* Make sure the container size is set */
+  height: 200px; /* Set height for the print version */
+}
+
+.cv-container.print-mode .photo {
+  width: 100% !important; /* Fill the container width */
+  height: 100% !important; /* Fill the container height */
+  border-radius: 50%;
+  object-fit: cover; /* This ensures no stretching and maintains aspect ratio */
+  border: 4px solid #4CAF50;
+}
+
+
+.name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.language-switcher {
+  margin-top: 20px;
+}
+
+.language-switcher button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #45a049;
+}
+
+/* Skills and Languages styling */
+.skills-section, .languages-section {
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+.skills-title, .languages-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skills-list, .languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-item, .languages-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #45a049;
+}
+
+/* Printed version adjustments */
+.cv-container.print-mode .cv-grid {
+  grid-template-columns: 35% 65%; /* Narrower right column */
+  gap: 20px; /* Adjust gap for better spacing */
+}
+
+.cv-container.print-mode .left-column,
+.cv-container.print-mode .right-column {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.cv-container.print-mode .right-column {
+  max-width: 65%; /* Restrict width of the right column */
+}
+
+/* Prevent icon and dot overflow */
+.cv-container.print-mode .skills-section,
+.cv-container.print-mode .languages-section {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  overflow: hidden; /* Ensure content stays within container */
+}
+
+.cv-container.print-mode .skills-item,
+.cv-container.print-mode .languages-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping within the item */
+  gap: 10px; /* Space between text and dots */
+}
+
+.cv-container.print-mode .skills-dots {
+  flex-shrink: 0;
+  width: auto;
+  display: flex;
+  gap: 4px; /* Adjust spacing between dots */
+}
+
+/* LinkedIn icon fix */
+.cv-container.print-mode .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cv-container.print-mode .contact-item svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* Additional adjustments for print aesthetics */
+.cv-container.print-mode {
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.cv-container.print-mode h1 {
+  font-size: 25px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cv-container.print-mode h2 {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 15px;
+  font-style: italic;
+}
