@@ -74,7 +74,6 @@ const App = () => {
       </div>
 
       <footer>
-        {/* Trigger PDF download */}
         <button onClick={downloadPDF}>{t("downloadCV")}</button>
       </footer>
     </div>
