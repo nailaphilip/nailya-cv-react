@@ -12,7 +12,7 @@ const Projects = () => {
         <li className="projects-item">
           <strong className="projects-name">
             <a
-              href="https://your-project1-link.com"
+              href="https://haiku-app-five.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -25,7 +25,7 @@ const Projects = () => {
         <li className="projects-item">
           <strong className="projects-name">
             <a
-              href="https://your-project2-link.com"
+              href="https://event-manager-app-1-k956.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
