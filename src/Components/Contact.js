@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 import './Contact.css'; 
 
 const Contact = () => {
@@ -20,6 +20,10 @@ const Contact = () => {
       <div className="contact-item">
         <FaGithub className="contact-icon" />
         <a className="contact-text" href="https://github.com/nailaphilip">github.com/nailaphilip</a>
+      </div>
+      <div className="contact-item">
+        <FaGlobe className="contact-icon" />
+        <a className="contact-text" href="https://nailaphilip.github.io/nailya-cv-react/">website</a>
       </div>
     </section>
   );
